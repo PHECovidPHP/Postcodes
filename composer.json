@@ -1,0 +1,33 @@
+{
+    "name": "phe-covid/postcodes",
+    "description": "English postcode to MSOA converter for PHP",
+    "keywords": ["Postcode", "MSOA", "Graham Campbell", "GrahamCampbell"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Graham Campbell",
+            "email": "graham@alt-three.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2.5 || ^8.0"
+    },
+    "require-dev": {
+        "bamarni/composer-bin-plugin": "^1.4.1",
+        "graham-campbell/guzzle-factory": "^4.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "PHECovid\\Postcodes\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PHECovid\\Gen\\Postcodes\\": "gen/",
+            "PHECovid\\Tests\\Postcodes\\": "tests/"
+        }
+    },
+    "config": {
+        "preferred-install": "dist"
+    }
+}
