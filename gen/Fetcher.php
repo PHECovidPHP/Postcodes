@@ -52,17 +52,17 @@ final class Fetcher
     private function fetchRaw(): \Generator
     {
         // this will use a boat load of memory, but who cares
-        file_put_contents('/tmp/postcodes.zip', (string) $this->client->request('GET', 'https://www.arcgis.com/sharing/rest/content/items/6a46e14a6c2441e3ab08c7b277335558/data')->getBody());
+        \file_put_contents('/tmp/postcodes.zip', (string) $this->client->request('GET', 'https://www.arcgis.com/sharing/rest/content/items/6a46e14a6c2441e3ab08c7b277335558/data')->getBody());
 
-        $handle = fopen('zip:///tmp/postcodes.zip#PCD_OA_LSOA_MSOA_LAD_FEB20_UK_LU.csv', "r");
+        $handle = \fopen('zip:///tmp/postcodes.zip#PCD_OA_LSOA_MSOA_LAD_FEB20_UK_LU.csv', 'r');
 
-        while (false !== ($line = fgets($handle))) {
-            $parsed = str_getcsv($line);
+        while (false !== ($line = \fgets($handle))) {
+            $parsed = \str_getcsv($line);
             if (isset($parsed[8][0]) && 'E' === $parsed[8][0]) {
-                yield str_replace(' ', '', $parsed[2]) => $parsed[8];
+                yield \str_replace(' ', '', $parsed[2]) => $parsed[8];
             }
         }
 
-        fclose($handle);
+        \fclose($handle);
     }
 }

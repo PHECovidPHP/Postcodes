@@ -90,6 +90,6 @@ final class %s
             $output .= \sprintf("        '%s' => '%s',\n", $inwardCode, $msoaCode);
         }
 
-        return rtrim($output);
+        return \rtrim($output);
     }
 }
