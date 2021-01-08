@@ -33,7 +33,7 @@ final class PostcodeTest extends TestCase
 
     public function testCreate2(): void
     {
-        $postcode = Postcode::create('EC1Y 0SF');
+        $postcode = Postcode::create('EC1Y0SF');
 
         self::assertInstanceOf(Postcode::class, $postcode);
         self::assertSame('EC1Y', $postcode->getOutwardCode());

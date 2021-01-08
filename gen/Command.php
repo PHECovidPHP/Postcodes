@@ -21,7 +21,7 @@ namespace PHECovid\Gen\Postcodes;
 final class Command
 {
     /**
-     * @var \PHECovid\Gen\Fetcher
+     * @var \PHECovid\Gen\Postcodes\Fetcher
      */
     private $fetcher;
 
