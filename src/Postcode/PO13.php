@@ -24,7 +24,7 @@ final class PO13
      * @var array<string,string>
      */
     private const MAP = [
-        '0AA' => 'E02004741',
+        '0AA' => 'E02004742',
         '0AB' => 'E02004741',
         '0AD' => 'E02004741',
         '0AE' => 'E02004742',

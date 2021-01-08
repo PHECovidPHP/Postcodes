@@ -51,10 +51,10 @@ final class Fetcher
 
     private function fetchRaw(): \Generator
     {
-        // this will use a boat load of memory, but who cares
-        \file_put_contents('/tmp/postcodes.zip', (string) $this->client->request('GET', 'https://www.arcgis.com/sharing/rest/content/items/6a46e14a6c2441e3ab08c7b277335558/data')->getBody());
+        // https://geoportal.statistics.gov.uk/datasets/postcode-to-output-area-to-lower-layer-super-output-area-to-middle-layer-super-output-area-to-local-authority-district-november-2020-lookup-in-the-uk
+        \file_put_contents('/tmp/postcodes.zip', (string) $this->client->request('GET', 'https://www.arcgis.com/sharing/rest/content/items/8a824519215947da99146692b0a0ff49/data')->getBody());
 
-        $handle = \fopen('zip:///tmp/postcodes.zip#PCD_OA_LSOA_MSOA_LAD_FEB20_UK_LU.csv', 'r');
+        $handle = \fopen('zip:///tmp/postcodes.zip#PCD_OA_LSOA_MSOA_LAD_NOV20_UK_LU.csv', 'r');
 
         while (false !== ($line = \fgets($handle))) {
             $parsed = \str_getcsv($line);

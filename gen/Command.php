@@ -37,6 +37,9 @@ final class Command
 
     public function run(): int
     {
+        \array_map('unlink', \array_filter(\glob(\sprintf('%s/../src/Postcode/*.php', __DIR__))));
+        echo "Removed Postcode directory\n";
+
         foreach (Generator::generate($this->fetcher->fetch()) as $class => $content) {
             $filename = \sprintf('%s/../src/Postcode/%s.php', __DIR__, $class);
             \file_put_contents($filename, $content);

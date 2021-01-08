@@ -9,7 +9,7 @@ This is an English postcode to MSOA converter for PHP.
 This version supports [PHP](https://php.net) 7.2-8.0. To get started, simply require the project using [Composer](https://getcomposer.org).
 
 ```bash
-$ composer require phe-covid/postcodes:^1.0
+$ composer require phe-covid/postcodes:^1.1
 ```
 
 

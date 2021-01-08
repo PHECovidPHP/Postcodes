@@ -24,6 +24,7 @@ final class NE68
      * @var array<string,string>
      */
     private const MAP = [
+        '7AB' => 'E02005708',
         '7BA' => 'E02005708',
         '7BB' => 'E02005708',
         '7BD' => 'E02005708',

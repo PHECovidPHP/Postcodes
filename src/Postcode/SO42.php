@@ -24,6 +24,7 @@ final class SO42
      * @var array<string,string>
      */
     private const MAP = [
+        '7AA' => 'E02004793',
         '7AB' => 'E02004793',
         '7AD' => 'E02004793',
         '7AE' => 'E02004793',
